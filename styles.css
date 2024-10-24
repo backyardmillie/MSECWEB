@@ -1,5 +1,222 @@
-#coverGif {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #15161b;
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: 0px;
+}
+
+#topbar{
+    background-color: #15161b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+#homebtn{
+    height: 100%;
+    width: 20%;
+    background-color: rgba(21, 22, 27, 0);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#homebtnimg{
+    width: auto;
+    height: 100%;
+    float: left;
+}
+
+
+#homebtntext{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size:  22px;
+    color: #E3EDF7;
+    text-align: right;
+    margin: auto;
+}
+
+#cover{
     width: 100%;
     height: 100%;
+    background-position: center top;
     background-size: cover;
+    background-image: url(RESOURCES/cover2.png);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: left;
 }
+
+#covertext1{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size:  30px;
+    color: #E3EDF7;
+    text-align: left;
+}
+
+#covertitle{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 100px;
+    color: #E3EDF7;
+    text-align: left;
+}
+
+#covertext2{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size:  40px;
+    color: #E3EDF7;
+    text-align: left;
+}
+
+#scrollingFrame1{
+    background-color: #E3EDF7;
+}
+
+#beforeScrollingText1{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  150px;
+    color: #15161b;
+    text-align: center;
+}
+
+#scrollingText1{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  150px;
+    color: #15161b;
+    text-wrap: nowrap;
+    transform: translate3d(1000px, 0px, 0px)
+}
+
+#loremIpsum{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size:  50px;
+    color: #E3EDF7;
+
+}
+
+#desc1{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  100px;
+    color: #E3EDF7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#desc2{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  100px;
+    color: #E3EDF7;
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    float: right;
+}
+
+#desc3{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  100px;
+    color: #E3EDF7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#mcamSiteLogo{
+    width: 10%;
+    height: auto;
+    padding: 220px 50px 220px 50px;
+}
+
+#descFrame{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#descFrame > :nth-child(2){
+    margin-left: auto;
+}
+
+#descImage1{
+    width: 30%;
+    height: 25%;
+    position: relative;
+    float: right;
+    object-fit: cover;
+}
+
+#descImage2{
+    width: 30%;
+    height: 25%;
+    position: relative;
+    float: left;
+    object-fit: cover;
+}
+
+#descImage3{
+    width: 30%;
+    height: 25%;
+    position: relative;
+    float: right;
+    object-fit: cover;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#separator{
+    background-color: #E3EDF7;
+}
+
+#separator::before{
+    content: "\200B";
+}
+
