@@ -1,23 +1,4 @@
-function wait(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 gsap.registerPlugin(ScrollTrigger);
-
-window.onload = function() {
-    gsap.from("#covertitle",{
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    ease: 'power2.inOut',
- });
- gsap.from("#mcamSiteLogo",{
-     y: 50,
-     opacity: 0,
-     duration: 1,
-     ease: 'power2.inOut',
-  });
-}
 
 gsap.to('#scrollingText1',{
     scrollTrigger: {
@@ -28,17 +9,6 @@ gsap.to('#scrollingText1',{
         end: "0 -10%"
     },
     x: -2500,
-}); 
-
-gsap.to('#scrollingText2',{
-    scrollTrigger: {
-        trigger: '#scrollingText2',
-        scrub: 2,
-        ease: 'power2.inOut',
-        start: "0% 80%",
-        end: "0 -10%"
-    },
-    x: 500,
 }); 
 
 gsap.to('#desc1',{
@@ -144,7 +114,66 @@ gsap.from('#desc3',{
     rotation: -10,
 }); 
 
+const numbers = "0123456789$€£█"
+const value = "233,500€"
+let interval = null
+const element = document.querySelector("#budgetText2")
+let activated = false
 
+function isInViewport() {
+    var rect = document.getElementById("budgetText2").getBoundingClientRect();
+    var html = document.documentElement;
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || html.clientHeight) &&
+      rect.right <= (window.innerWidth || html.clientWidth)
+    );
+  }
 
+window.addEventListener("scroll", element => {
+    if(isInViewport()){
+        if(activated == false) {
+            let iteration = 0
+            clearInterval(interval)
+            interval = setInterval(() => {
+                document.querySelector("#budgetText2").innerText = document.querySelector("#budgetText2").innerText
+                .split("")
+                .map((letter, index) => {
+                    if(index < iteration){
+                        return value[index];
+                    }
+                    
+                    return numbers[Math.floor(Math.random() * 14)]
+                }).join("")
+                
+                if(iteration >= value.length){
+                    clearInterval(interval)
+                }
+                
+                iteration += 1/50
+            })
+            activated = true
+        }
+      };
+})
 
+window.onload = function() {
+    let coverTitleCharactersUnspanned = document.getElementById("coverTitle");
+    let htmlString = ''; 
+    let charArray = coverTitleCharactersUnspanned.textContent.split('')
+    for(let i = 0; i < charArray.length; i++){
+        htmlString += `<span translate="yes" id="letter">${charArray[i]}</span>`
+    }
+    coverTitleCharactersUnspanned.innerHTML = htmlString;
 
+    let coverTitleCharactersSpanned = [...coverTitleCharactersUnspanned.querySelectorAll('*')]
+    coverTitleCharactersSpanned.forEach(char => {
+        char.style = "transform: translate3d(0, -50px, 0); opacity: 0"
+    })
+    gsap.to("#letter",{
+        opacity: 1,
+        delay: 0.2,
+        stagger: .05,
+    })
+}; 

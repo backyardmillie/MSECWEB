@@ -67,17 +67,7 @@ html{
     justify-content: left;
 }
 
-#covertext1{
-    font-family: 'Montserrat', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: italic;
-    font-size:  30px;
-    color: #E3EDF7;
-    text-align: left;
-}
-
-#covertitle{
+#coverTitle{
     font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -87,19 +77,14 @@ html{
     text-align: left;
 }
 
-#covertext2{
-    font-family: 'Montserrat', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size:  40px;
-    color: #E3EDF7;
-    text-align: left;
-}
-
 #scrollingFrame{
     background-color: #E3EDF7;
 }
+
+#budgetFrame{
+    background-color: #E3EDF7;
+}
+
 
 #beforeScrollingText1{
     font-family: 'Montserrat', sans-serif;
@@ -189,7 +174,6 @@ html{
     width: 30%;
     height: 25%;
     position: relative;
-    float: right;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -198,7 +182,6 @@ html{
     width: 30%;
     height: 25%;
     position: relative;
-    float: left;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -207,23 +190,46 @@ html{
     width: 30%;
     height: 25%;
     position: relative;
-    float: right;
     object-fit: cover;
     border-radius: 15px;
 }
 
-#scrollingText2{
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#budgetText1{
     font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size:  150px;
     color: #15161b;
-    text-wrap: nowrap;
-    transform: translate3d(-1500px, 0px, 0px)
+    text-align: center;
+}
+
+#budgetText2{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  150px;
+    color: #15161b;
+    text-align: center;
 }
 
 
-::-webkit-scrollbar{
-    display: none;
+#budgetText3{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  150px;
+    color: #15161b;
+    text-align: center;
+}
+
+#letter{
+    position: relative;
 }
