@@ -11,6 +11,18 @@ gsap.to('#scrollingText1',{
     x: -2500,
 }); 
 
+gsap.to('#deploymentScrollingText',{
+    scrollTrigger: {
+        trigger: '#deploymentScrollingText',
+        scrub: 1,
+        ease: 'power2.inOut',
+        start: "0% 90%",
+        end: "0 -10%"
+    },
+    x: 1500,
+}); 
+
+
 gsap.to('#desc1',{
     scrollTrigger: {
         trigger: '#desc1',
@@ -113,6 +125,52 @@ gsap.from('#desc3',{
     opacity: 0,
     rotation: -10,
 }); 
+
+gsap.from('#misakaImg1',{
+    scrollTrigger: {
+        trigger: '#misakaImg1',
+        scrub: 1,
+        ease: 'power2.inOut',
+        start: "0% 110%",
+        end: "0 30%"
+    },
+    x: 1000,
+})
+
+gsap.from('#misakaDeploymentText',{
+    scrollTrigger: {
+        trigger: '#misakaDeploymentText',
+        scrub: 1,
+        ease: 'power2.inOut',
+        start: "0% 110%",
+        end: "0 30%"
+    },
+    x: -1200,
+})
+
+
+
+gsap.from('#moldovaImg1',{
+    scrollTrigger: {
+        trigger: '#moldovaImg1',
+        scrub: 1,
+        ease: 'power2.inOut',
+        start: "0% 110%",
+        end: "0 30%"
+    },
+    x: -1000,
+})
+
+gsap.from('#moldovaDeploymentText',{
+    scrollTrigger: {
+        trigger: '#moldovaDeploymentText',
+        scrub: 1,
+        ease: 'power2.inOut',
+        start: "0% 110%",
+        end: "0 30%"
+    },
+    x: 1200,
+})
 
 const numbers = "0123456789$€£█"
 const value = "233,500€"

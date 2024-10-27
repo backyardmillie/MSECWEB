@@ -16,48 +16,13 @@ html{
     scrollbar-width: 0px;
 }
 
-#topbar{
-    background-color: #15161b;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    overflow: hidden;
-    z-index: 50;
-}
-
-#homebtn{
-    height: 100%;
-    width: 20%;
-    background-color: rgba(21, 22, 27, 0);
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-#homebtnimg{
-    width: auto;
-    height: 100%;
-    float: left;
-}
-
-
-#homebtntext{
-    font-family: 'Montserrat', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size:  22px;
-    color: #E3EDF7;
-    text-align: right;
-    margin: auto;
+img{
+    max-width: none;
 }
 
 #cover{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-position: center top;
     background-size: cover;
     background-image: url(RESOURCES/cover2.png);
@@ -85,13 +50,17 @@ html{
     background-color: #E3EDF7;
 }
 
+#deploymentsFrame{
+    background-color: #45818E;
+}
+
 
 #beforeScrollingText1{
     font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size:  150px;
+    font-size:  13.5vw;
     color: #15161b;
     text-align: center;
 }
@@ -101,7 +70,7 @@ html{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size:  150px;
+    font-size:  13.5vw;
     color: #15161b;
     text-wrap: nowrap;
     transform: translate3d(1000px, 0px, 0px)
@@ -171,24 +140,21 @@ html{
 }
 
 #descImage1{
-    width: 30%;
-    height: 25%;
+    width: 25%;
     position: relative;
     object-fit: cover;
     border-radius: 15px;
 }
 
 #descImage2{
-    width: 30%;
-    height: 25%;
+    width: 25%;
     position: relative;
     object-fit: cover;
     border-radius: 15px;
 }
 
 #descImage3{
-    width: 30%;
-    height: 25%;
+    width: 25%;
     position: relative;
     object-fit: cover;
     border-radius: 15px;
@@ -204,7 +170,7 @@ html{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size:  150px;
+    font-size:  13.5vw;
     color: #15161b;
     text-align: center;
 }
@@ -214,7 +180,7 @@ html{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size:  150px;
+    font-size:  13.5vw;
     color: #15161b;
     text-align: center;
 }
@@ -225,11 +191,77 @@ html{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size:  150px;
+    font-size:  13.5vw;
     color: #15161b;
     text-align: center;
 }
 
-#letter{
+#deploymentScrollingText{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  13.5vw;
+    color: #15161b81;
+    text-wrap: nowrap;
+    text-align: center;
+    transform: translate3d(-3000px, 0px, 0px)
+}
+
+#misakaDeploymentFrame{
+    background-color: #E3EDF7;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#misakaDeploymentText{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  6vw;
+    color: #45818E81;
+    text-align: left;
+}
+
+#misakaImg1{
+    width: 30%;
     position: relative;
+    object-fit: cover;
+    border-radius: 30px 0px 0px 30px;
+    margin-left: auto;
+}
+
+
+#moldovaDeploymentFrame{
+    background-color: #15161b;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#moldovaDeploymentText{
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size:  6vw;
+    color: #E3EDF781;
+    padding-top: 100px;
+    text-align: right;
+}
+
+#moldovaImg1{
+    width: 30%;
+    position: relative;
+    object-fit: cover;
+    border-radius: 0px 30px 30px 0px;
+    margin-right: auto;
+    float: left;
+}
+
+#cover2{
+    width: 100%;
+    height: 100%;
 }
