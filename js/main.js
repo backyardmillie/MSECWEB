@@ -173,7 +173,7 @@ gsap.from('#moldovaDeploymentText',{
 })
 
 const numbers = "0123456789$€£█"
-const value = "233,500€"
+const value = "325,000€"
 let interval = null
 const element = document.querySelector("#budgetText2")
 let activated = false
