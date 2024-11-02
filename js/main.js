@@ -148,8 +148,6 @@ gsap.from('#misakaDeploymentText',{
     x: -1200,
 })
 
-
-
 gsap.from('#moldovaImg1',{
     scrollTrigger: {
         trigger: '#moldovaImg1',
@@ -170,6 +168,28 @@ gsap.from('#moldovaDeploymentText',{
         end: "0 30%"
     },
     x: 1200,
+})
+
+gsap.from('#seychellesImg1',{
+    scrollTrigger: {
+        trigger: '#seychellesImg1',
+        scrub: 1,
+        ease: 'power2.inOut',
+        start: "0% 110%",
+        end: "0 30%"
+    },
+    x: 1000,
+})
+
+gsap.from('#seychellesDeploymentText',{
+    scrollTrigger: {
+        trigger: '#seychellesDeploymentText',
+        scrub: 1,
+        ease: 'power2.inOut',
+        start: "0% 110%",
+        end: "0 30%"
+    },
+    x: -1200,
 })
 
 const numbers = "0123456789$€£█"
